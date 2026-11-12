@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sana Iqbal | AI Engineer and Full-Stack Developer in Lahore</title>
+<meta name="description" content="Portfolio of Sana Iqbal, a software engineer in Lahore building production systems, from multi-tenant SaaS to RAG and multi-agent AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F3; --panel:#FFFFFF; --ink:#16231F; --muted:#51635D; --line:#D3DCD7;
+  --accent:#0E6B62; --accent-ink:#FFFFFF; --mark:#FFE98A; --mark-ink:#3A2F00; --warn:#8A5A00;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1513; --panel:#161F1C; --ink:#E7EFEB; --muted:#9DB0A9; --line:#2A3834;
+    --accent:#5CC8B8; --accent-ink:#06201C; --mark:#5B4A00; --mark-ink:#FFF1B0; --warn:#E6B450;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1513; --panel:#161F1C; --ink:#E7EFEB; --muted:#9DB0A9; --line:#2A3834;
+  --accent:#5CC8B8; --accent-ink:#06201C; --mark:#5B4A00; --mark-ink:#FFF1B0; --warn:#E6B450;
+  color-scheme:dark;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 16px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-text-size-adjust:100%}
+.wrap{max-width:1040px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-right,0px)) 0 max(20px,env(safe-area-inset-left,0px))}
+@media (min-width:700px){.wrap{padding-right:max(32px,env(safe-area-inset-right,0px));padding-left:max(32px,env(safe-area-inset-left,0px))}}
+a{color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);line-height:1.12;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,8vw,4.2rem);font-weight:700}
+h2{font-size:clamp(1.6rem,4vw,2.1rem);font-weight:700;margin-bottom:20px}
+h3{font-size:1.5rem;font-weight:700}
+p{margin:0 0 14px;max-width:68ch}
+nav{display:flex;gap:22px;flex-wrap:wrap;padding:22px 0}
+nav a{color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover{text-decoration:underline;text-underline-offset:4px}
+nav .name{font-family:var(--display);font-weight:700;margin-right:auto}
+header{padding:34px 0 56px}
+.eyebrow{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 14px}
+h1 .nm{display:block}
+h1 .tg{display:block;font-size:.68em;font-weight:500;color:var(--accent);margin-top:.35em;line-height:1.15}
+.lede{font-size:1.2rem;color:var(--muted);margin:20px 0 32px;max-width:56ch}
+.ask{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;max-width:640px}
+.ask .q{font-weight:500;margin:0 0 12px}
+.ask .a{margin:0;color:var(--ink)}
+.ask .meta{margin:14px 0 0;font-size:.9rem;color:var(--muted)}
+.cite{display:inline-block;background:var(--mark);color:var(--mark-ink);font-weight:500;font-size:.8rem;line-height:1;padding:3px 6px;border-radius:4px;text-decoration:none;vertical-align:.15em;margin:0 1px}
+.cite:hover{outline:2px solid var(--accent)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 20px;border-radius:999px;font-weight:500;text-decoration:none;border:1.5px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.alt{color:var(--accent)}
+.ibtn{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);background:transparent}
+.ibtn:hover{background:var(--accent);color:var(--accent-ink)}
+.ibtn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.ibtn svg{width:22px;height:22px;fill:currentColor}
+section{padding:48px 0;border-top:1px solid var(--line)}
+.proj{padding:4px 0 28px}
+.proj+.proj{padding-top:28px;border-top:1px dashed var(--line)}
+.head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.badge{font-size:.82rem;font-weight:500;padding:3px 10px;border-radius:999px}
+.badge.live{background:var(--accent);color:var(--accent-ink)}
+.badge.mvp{border:1.5px solid var(--warn);color:var(--warn)}
+.badge.kind{border:1.5px solid var(--line);color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:12px 0 16px;padding:0}
+.tags li{font-size:.88rem;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:2px 9px}
+details{margin-top:6px}
+summary{cursor:pointer;font-weight:500;color:var(--accent);padding:6px 0}
+#projects details{margin-top:12px}
+#projects summary{padding:10px 0}
+
+.case h4{break-after:avoid}
+.case{border-left:3px solid var(--line);padding:4px 0 4px 18px;margin-top:10px}
+.case h4{font-family:var(--display);font-size:1.05rem;margin:16px 0 4px}
+.case ol,.case ul{margin:6px 0 10px;padding-left:20px;max-width:64ch}
+.case li{margin-bottom:4px}
+.case h4:first-child{margin-top:4px}
+#projects .proj:last-child{padding-bottom:0}
+#more-work .proj:last-child{margin-bottom:0}
+dd:last-child{margin-bottom:0}
+dl{margin:0;display:grid;grid-template-columns:minmax(120px,170px) 1fr;gap:14px 24px}
+dt{font-weight:500}
+dd{margin:0;color:var(--muted)}
+@media (max-width:600px){dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:12px}}
+footer{padding:28px 0 56px;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+nav a{padding:10px 0}
+.btn{min-height:44px}
+summary{padding:10px 0}
+p,li,dd{overflow-wrap:break-word}
+#more-work .proj{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--panel);margin-bottom:16px}
+@media (min-width:700px){
+  #more-work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  #more-work h2{grid-column:1/-1;margin-bottom:2px}
+  #more-work .proj{margin:0}
+}
+@media (min-width:900px){
+  header{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-areas:"h ask" "lede ask" "cta ask";grid-template-rows:auto auto 1fr;column-gap:56px;align-content:start}
+  header .intro{grid-area:h}
+  header .lede{grid-area:lede}
+  header .ask{grid-area:ask;align-self:center;max-width:none}
+  header .cta{grid-area:cta;align-self:start}
+  
+  
+  .case{column-count:2;column-gap:48px}
+  .case p,.case ol,.case ul{max-width:none}
+}
+@media (max-width:600px){
+  nav{gap:4px 18px;padding:14px 0 8px}
+  nav .name{flex-basis:100%}
+  header{padding:20px 0 40px}
+  h1{font-size:2.4rem}
+  .lede{font-size:1.08rem}
+  section{padding:36px 0}
+  .ask{padding:18px}
+  .cta .btn{flex:1 1 100%;text-align:center}
+  .case{padding-left:14px}
+}
+@media (min-width:1500px){body{font-size:1.15rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections">
+  <span class="name">Sana Iqbal</span>
+  <a href="#projects">Projects</a><a href="#about">About</a><a href="#stack">Tech stack</a><a href="#contact">Contact</a>
+</nav>
+
+<header>
+  <div class="intro">
+    <p class="eyebrow">Product thinking · Building · Shipping</p>
+    <h1><span class="nm">Sana Iqbal.</span><span class="tg">Products, built end to end.</span></h1>
+  </div>
+  <p class="lede">Software engineer in Lahore. Four years shipping full-stack products, multi-tenant SaaS, and data pipelines on AWS, and for the last two years the AI layer on top: RAG, agents, and voice.</p>
+  <div class="ask" role="group" aria-label="Example question and answer">
+    <p class="q">What has Sana shipped?</p>
+    <p class="a">A multi-tenant SaaS platform on microservices <a class="cite" href="#regenesis">1</a>, then the AI layer on top: a market-intelligence platform with a RAG chat that cites its sources <a class="cite" href="#pak-niche">2</a>, a multi-agent revenue assistant that takes voice commands <a class="cite" href="#soraq">3</a>, and an AI career coach with live mock interviews <a class="cite" href="#career-coach">4</a>. Her backends run on Node.js, FastAPI, and AWS.</p>
+    <p class="meta">Each number links to the project below.</p>
+  </div>
+  <div class="cta">
+    <a class="btn main" href="#projects">See the projects</a>
+    <a class="ibtn" href="mailto:sana.iqbal.siqbal@gmail.com" aria-label="Email Sana" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5v2.2z"/></svg></a>
+    <a class="ibtn" href="https://linkedin.com/in/sana-iqbal05" rel="noopener" aria-label="Sana on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+  </div>
+</header>
+
+<section id="projects">
+  <h2>Featured projects</h2>
+
+  <article class="proj" id="pak-niche">
+    <div class="head"><h3>Pak Niche</h3><span class="badge live">Live</span></div>
+    <p>An AI-powered market and sales intelligence platform that finds Pakistani companies, scores business niches, and answers questions through a RAG chat that cites its sources. Built solo for my startup, Apolix.</p>
+    <ul class="tags"><li>FastAPI</li><li>Python</li><li>ChromaDB</li><li>RAG</li><li>React</li><li>PostgreSQL</li></ul>
+    <p><a href="https://pak-niche-intelligence.vercel.app/" rel="noopener">Open the live app</a></p>
+    <details>
+      <summary>Read the case study</summary>
+      <div class="case">
+        <h4>The problem</h4>
+        <p>Finding good B2B leads in Pakistan means searching scattered sources by hand. The data is messy and often outdated, and many tools fill the gaps with guesses.</p>
+        <h4>What I built</h4>
+        <p>A research pipeline that collects public company data, normalizes it, and tracks where every field came from. A scoring layer rates niches with explicit rules, and a ChromaDB index lets the chat retrieve evidence before it answers.</p>
+        <h4>How it works</h4>
+        <ol>
+          <li>Collect from Google Places, search engines, directories, associations, and company websites.</li>
+          <li>Normalize companies and niches into structured records with source and confidence.</li>
+          <li>Score niches and companies using evidence-based rules.</li>
+          <li>Store the records and rebuild the vector index.</li>
+          <li>Serve the dashboard, exports, and cited chat through FastAPI.</li>
+        </ol>
+        <h4>Key decision: no invented data</h4>
+        <p>The system never fabricates emails or funding figures. Unverified data is flagged, so the output stays usable for real outreach.</p>
+        <h4>Stack</h4>
+        <p>Python, FastAPI, SQLAlchemy, PostgreSQL/SQLite, ChromaDB, Groq, React 18, Vite, Tailwind CSS, Recharts. Deployed on Render (API) and Vercel (frontend).</p>
+      </div>
+    </details>
+  </article>
+
+  <article class="proj" id="soraq">
+    <div class="head"><h3>Soraq</h3><span class="badge mvp">MVP</span></div>
+    <p>An AI-native revenue assistant. Voice or text commands go to an orchestrator that hands each task to a specialized sales, research, or CRM agent.</p>
+    <ul class="tags"><li>Multi-agent LLM</li><li>Groq</li><li>Whisper</li><li>Supabase</li><li>Voice</li></ul>
+    <details>
+      <summary>Read the case study</summary>
+      <div class="case">
+        <h4>The problem</h4>
+        <p>Sales work jumps between research, CRM updates, and follow-ups. One chatbot with one giant prompt gets noisy, slow, and expensive.</p>
+        <h4>What I built</h4>
+        <p>A command goes to Soraq Core, then to an agent orchestrator, then to the right specialized agent. A Mission Control view shows what the agents are doing, and a knowledge graph and memory feed context back in.</p>
+        <h4>Engineering story: fixing voice</h4>
+        <p>Browser voice input kept crashing the page. I tested the likely causes one at a time: the Speech API, heavy UI animation, and audio capture. I removed the animation loops and replaced browser speech recognition with MediaRecorder plus server-side Whisper through Groq. Voice capture became crash-safe, and failures now have a clear owner.</p>
+        <h4>Key decision: route, don&rsquo;t stuff</h4>
+        <p>Specialized agents keep each prompt focused, which cuts noise and cost and makes behavior easier to debug.</p>
+        <h4>Stack</h4>
+        <p>Groq (chat and Whisper), Supabase (auth, workspaces, row-level security, server functions), multi-agent orchestration.</p>
+      </div>
+    </details>
+  </article>
+
+  <article class="proj" id="career-coach">
+    <div class="head"><h3>AI Career Coach</h3><span class="badge live">Live</span></div>
+    <p>Upload a resume, see your skill gaps for a target role, and practice with a real-time AI mock interviewer.</p>
+    <ul class="tags"><li>React</li><li>Supabase</li><li>Groq</li><li>Edge Functions</li><li>Vercel</li></ul>
+    <p><a href="https://ai-career-coach-khaki-delta.vercel.app" rel="noopener">Open the live app</a></p>
+    <details>
+      <summary>Read the case study</summary>
+      <div class="case">
+        <h4>The problem</h4>
+        <p>Most job seekers get vague resume advice and little interview practice. Generic chatbots give generic answers, and slow replies make practice feel fake.</p>
+        <h4>What I built</h4>
+        <p>A full product with sign-in, resume upload, structured analysis, a career path, and mock interviews. PDFs become structured career signals: skills, experience, and gaps.</p>
+        <h4>Key decision: latency is a feature</h4>
+        <p>I chose Groq because a slow interviewer breaks trust. AI calls run in Supabase Edge Functions so keys stay on the server, and row-level security keeps each user&rsquo;s data private.</p>
+        <h4>Stack</h4>
+        <p>React, Vite, Tailwind CSS, Supabase (Auth, Storage, RLS, Edge Functions), Groq API, Vercel.</p>
+      </div>
+    </details>
+  </article>
+</section>
+
+<section id="more-work">
+  <h2>More work</h2>
+
+  <article class="proj" id="regenesis">
+    <div class="head"><h3>Regenesis</h3><span class="badge kind">Production SaaS</span></div>
+    <p>A multi-tenant SaaS platform built on microservices. Node.js services talk to each other through AWS SQS, every tenant&rsquo;s data is fully isolated, and access is controlled with enterprise-grade role-based permissions.</p>
+    <ul class="tags"><li>Node.js</li><li>React</li><li>Redux</li><li>PostgreSQL</li><li>Redis</li><li>AWS SQS</li><li>Microservices</li></ul>
+  </article>
+
+  <article class="proj" id="bridge-africa">
+    <div class="head"><h3>Bridge Africa</h3><span class="badge kind">Client project</span></div>
+    <p>A full-stack e-commerce platform for the African market. A Laravel REST API and a Vue.js frontend cover product management, order processing, payments, and authentication for an international client.</p>
+    <ul class="tags"><li>PHP Laravel</li><li>Vue.js</li><li>MySQL</li><li>REST API</li></ul>
+  </article>
+
+  <article class="proj" id="fixafib">
+    <div class="head"><h3>FixAfib</h3><span class="badge kind">Healthcare platform</span></div>
+    <p>A MERN-stack platform for patients with atrial fibrillation. It connects patients and doctors in real time, sends medication reminders, and offers AI-assisted medication guidance. It runs on AWS EC2, with S3 for secure medical storage.</p>
+    <ul class="tags"><li>MongoDB</li><li>Express.js</li><li>React</li><li>Node.js</li><li>AWS EC2</li><li>AWS S3</li></ul>
+  </article>
+
+  <article class="proj" id="mcq-generator">
+    <div class="head"><h3>AI MCQ Generator</h3><span class="badge kind">Client project</span></div>
+    <p>A question engine for an e-learning platform. It uses OpenAI to generate multiple-choice questions calibrated to each student&rsquo;s experience level, so personalized practice scales to every learner.</p>
+    <ul class="tags"><li>Python</li><li>FastAPI</li><li>OpenAI API</li></ul>
+  </article>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I&rsquo;m a software engineer from Lahore with over four years of experience building production web applications and backends. I started in full-stack work with the MERN and MEAN stacks, then spent the last two years on applied AI: retrieval-augmented generation, multi-agent systems, and voice-enabled products.</p>
+  <p>I like taking an AI idea all the way to something people can use: data pipelines, vector search, APIs, authentication, deployment, and the product on top. Before this I built healthcare, e-commerce, and multi-tenant SaaS platforms with Node.js, React, Laravel, PostgreSQL, and AWS, which taught me what production demands.</p>
+  <p>What I care about most is trust: AI that cites its sources, never invents data, and fails safely. I&rsquo;m the founder of Apolix, a software and AI services startup, and I&rsquo;m now going deeper into fine-tuning and inference optimization.</p>
+</section>
+
+<section id="stack">
+  <h2>Tech stack</h2>
+  <dl>
+    <dt>AI and LLM</dt><dd>Groq and OpenAI APIs, RAG pipelines, embeddings, ChromaDB, multi-agent orchestration, prompt engineering, Whisper speech-to-text</dd>
+    <dt>Backend</dt><dd>Python, FastAPI, Flask, Node.js, NestJS, Express.js, Laravel, REST, GraphQL, SQLAlchemy, Prisma, JWT/OAuth</dd>
+    <dt>Frontend</dt><dd>React, Next.js, TypeScript, Redux, Zustand, React Query, Angular, Vue.js, Tailwind CSS, Vite</dd>
+    <dt>Data</dt><dd>PostgreSQL, MongoDB, MySQL, Redis, Supabase, SQLite, ChromaDB</dd>
+    <dt>Cloud and DevOps</dt><dd>AWS (S3, EC2, RDS, ECS, ElastiCache, SQS), Docker, CI/CD, Render, Vercel, Linux, Git, BullMQ</dd>
+    <dt>Integrations</dt><dd>Meta API, GA4, Google Ads API, Google Places, payments</dd>
+    <dt>Practices</dt><dd>Row-level security, audit logging, HIPAA/GDPR-aligned security, microservices, Agile/Scrum, code review</dd>
+    <dt>Learning next</dt><dd>LoRA and QLoRA fine-tuning, PyTorch, inference optimization</dd>
+  </dl>
+</section>
+
+<section id="contact">
+  <h2>Let&rsquo;s build something useful</h2>
+  <p>I&rsquo;m open to AI/ML and backend engineering roles, and to select projects through Apolix. The fastest way to reach me is email: <a href="mailto:sana.iqbal.siqbal@gmail.com">sana.iqbal.siqbal@gmail.com</a>. You can also find me on LinkedIn.</p>
+  <div class="cta"><a class="ibtn" href="mailto:sana.iqbal.siqbal@gmail.com" aria-label="Email Sana" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5v2.2z"/></svg></a><a class="ibtn" href="https://linkedin.com/in/sana-iqbal05" rel="noopener" aria-label="Sana on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a></div>
+</section>
+
+<footer>© 2026 Sana Iqbal. Lahore, Pakistan.</footer>
+</div>
+</body>
+</html>
